@@ -5,17 +5,19 @@ GROUP_ID = "YOUR_GROUP_ID_HERE"
 
 # Forbidden words that will result in ban
 FORBIDDEN_WORDS = [
-    "badword1",
-    "badword2",
-    "badword3"
+    "scam",
+    "rug",
+    "fake",
+    "honeypot",
+    "rugpull"
 ]
 
 # Buy button URL
-BUY_URL = "https://your-store-url.com"
+BUY_URL = "https://pumpfun.com/trade/jokecoin"
 
 # Reminder messages
 REMINDER_MESSAGES = [
-    "🔥 Don't forget to check out our amazing products!",
-    "💫 Special offers waiting for you in our store!",
-    "🎁 Visit our store for exclusive deals!"
+    "🚀 JokeCoin is now LIVE on Solana! Buy on PumpFun: pumpfun.com/trade/jokecoin 🔥",
+    "💎 Join the JokeCoin revolution! Trade now on PumpFun! Limited supply available 💫",
+    "🌟 Don't miss out on JokeCoin! The most entertaining token on Solana! Buy now on PumpFun 🎯"
 ]

@@ -43,7 +43,7 @@ def webhook():
 def welcome_new_member(message):
     """Welcome new members with buy button"""
     for new_member in message.new_chat_members:
-        welcome_text = f"Welcome {new_member.first_name} to our group! 🎉\nCheck out our products!"
+        welcome_text = f"Welcome {new_member.first_name} to the official JokeCoin community! 🎉\n\n🚀 JokeCoin is now LIVE on Solana!\n💎 Trade on PumpFun\n🔒 Liquidity Locked\n\nClick below to buy $JOKE!"
         send_buy_button(message.chat.id, welcome_text)
 
 @bot.message_handler(func=lambda message: True)
@@ -58,7 +58,7 @@ def handle_messages(message):
         bot.delete_message(message.chat.id, message.message_id)
         warning = bot.send_message(
             message.chat.id,
-            f"⚠️ {message.from_user.first_name}, only admins can share invite links!"
+            f"⚠️ {message.from_user.first_name}, for security reasons, only admins can share invite links! Join our official channels only."
         )
         # Delete warning after 30 seconds
         threading.Timer(30, bot.delete_message, args=[message.chat.id, warning.message_id]).start()
@@ -70,7 +70,7 @@ def handle_messages(message):
         bot.ban_chat_member(message.chat.id, message.from_user.id)
         bot.send_message(
             message.chat.id,
-            f"🚫 {message.from_user.first_name} has been banned for using forbidden words."
+            f"🚫 {message.from_user.first_name} has been banned for FUD or harmful behavior. JokeCoin maintains a positive community!"
         )
 
 def send_reminder():
