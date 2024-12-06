@@ -13,6 +13,7 @@ BUY_URL = os.getenv('BUY_URL', 'https://pumpfun.com/trade/jokecoin')
 WELCOME_IMAGE_URL = os.getenv('WELCOME_IMAGE_URL')
 WARNING_IMAGE_URL = os.getenv('WARNING_IMAGE_URL')
 BAN_IMAGE_URL = os.getenv('BAN_IMAGE_URL')
+REMINDER_IMAGE_URL = os.getenv('REMINDER_IMAGE_URL')
 
 # Forbidden words that will result in ban
 FORBIDDEN_WORDS = [
