@@ -1,7 +1,13 @@
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
 # Bot configuration
-BOT_TOKEN = "7565347079:AAHX1uVP1d5aJ_8e4AGNAMHuRU3YS9bkCzo"
-WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"  # e.g. https://your-domain.com/webhook
-GROUP_ID = "YOUR_GROUP_ID_HERE"
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')
+GROUP_ID = os.getenv('GROUP_ID')
 
 # Forbidden words that will result in ban
 FORBIDDEN_WORDS = [
