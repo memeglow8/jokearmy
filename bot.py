@@ -12,10 +12,11 @@ app = Flask(__name__)
 bot = TeleBot(BOT_TOKEN)
 
 def send_buy_button(chat_id, message_text, image_url=None):
-    """Create and send message with buy button"""
+    """Create and send message with buy and claim buttons"""
     markup = types.InlineKeyboardMarkup()
     buy_button = types.InlineKeyboardButton(text="🛍 Buy Now", url=BUY_URL)
-    markup.add(buy_button)
+    claim_button = types.InlineKeyboardButton(text="🎁 Claim Airdrop", url=CLAIM_URL)
+    markup.add(buy_button, claim_button)
     
     if image_url:
         bot.send_photo(chat_id, image_url, caption=message_text, reply_markup=markup)
@@ -48,7 +49,7 @@ def webhook():
 def welcome_new_member(message):
     """Welcome new members with buy button"""
     for new_member in message.new_chat_members:
-        welcome_text = f"Welcome {new_member.first_name} to the official {PROJECT_NAME} community! 🎉\n\n🚀 {PROJECT_NAME} is now LIVE on Solana!\n💎 Trade Now\n🔒 Liquidity Locked\n\nClick below to buy $JOKE!"
+        welcome_text = f"🎉 Welcome {new_member.first_name} to the official {PROJECT_NAME} community! 🚀\n\n🔥 HUGE NEWS: We just launched and we're spreading joy with massive airdrops!\n\n💰 Claim up to $50,000 in $JOKE tokens if you're a holder!\n\n✨ Why Join Us:\n🎯 Fresh Launch\n😊 Putting smiles on faces\n💎 Massive airdrop potential\n🔒 Liquidity Locked\n\n🎁 Choose Your Path:\n• Buy Now to become eligible\n• Claim your airdrop if you're a holder"
         send_buy_button(message.chat.id, welcome_text, WELCOME_IMAGE_URL)
 
 @bot.message_handler(func=lambda message: True)
