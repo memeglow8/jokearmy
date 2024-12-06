@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, Response
 from telebot import TeleBot, types
 import schedule
@@ -107,7 +108,12 @@ def main():
     bot.set_webhook(url=WEBHOOK_URL)
     
     # Start Flask app
-    app.run(host='0.0.0.0', port=8443, ssl_context=('cert.pem', 'key.pem'))
+    # In production (Render), the SSL is handled by the platform
+    if os.environ.get('RENDER'):
+        app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8443)))
+    else:
+        # Local development with SSL
+        app.run(host='0.0.0.0', port=8443, ssl_context=('cert.pem', 'key.pem'))
 
 if __name__ == '__main__':
     main()
