@@ -33,7 +33,7 @@ def contains_forbidden_words(message):
         return any(word.lower() in message.text.lower() for word in FORBIDDEN_WORDS)
     return False
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/', methods=['POST'])
 def webhook():
     """Handle webhook requests from Telegram"""
     if request.headers.get('content-type') == 'application/json':
@@ -105,7 +105,7 @@ def main():
     
     # Set webhook
     bot.remove_webhook()
-    bot.set_webhook(url=WEBHOOK_URL)
+    bot.set_webhook(url=WEBHOOK_URL + '/')
     
     # Start Flask app
     # In production (Render), the SSL is handled by the platform
