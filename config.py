@@ -22,11 +22,11 @@ FORBIDDEN_WORDS = [
 ]
 
 # Buy button URL
-BUY_URL = "https://pumpfun.com/trade/jokearmy"
+BUY_URL = "https://pumpfun.com/trade/jokecoin"
 
 # Reminder messages
 REMINDER_MESSAGES = [
-    "🚀 JokeArmy ($JOKE) is now LIVE on Solana! Buy on PumpFun: pumpfun.com/trade/jokearmy 🔥\n\n💎 Low Market Cap Gem\n✅ Liquidity Locked\n🔒 Contract Renounced",
-    "💫 Join the JokeArmy ($JOKE) revolution! Trade now on PumpFun!\n\n📈 Chart looking bullish\n💎 Diamond hands community\n🌟 Next 100x Solana Gem",
-    "🎯 Don't miss out on JokeArmy ($JOKE)!\n\n🚀 The most entertaining token on Solana\n💎 Strong community\n💰 Buy now on PumpFun before we moon! 🌙"
+    "🚀 JokeCoin ($JOKE) is now LIVE on Solana! Buy on PumpFun: pumpfun.com/trade/jokecoin 🔥\n\n💎 Low Market Cap Gem\n✅ Liquidity Locked\n🔒 Contract Renounced",
+    "💫 Join the JokeCoin ($JOKE) revolution! Trade now on PumpFun!\n\n📈 Chart looking bullish\n💎 Diamond hands community\n🌟 Next 100x Solana Gem",
+    "🎯 Don't miss out on JokeCoin ($JOKE)!\n\n🚀 The most entertaining token on Solana\n💎 Strong community\n💰 Buy now on PumpFun before we moon! 🌙"
 ]
