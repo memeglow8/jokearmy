@@ -30,7 +30,9 @@ FORBIDDEN_WORDS = [
 
 # Reminder messages
 REMINDER_MESSAGES = [
-    f"🚀 {PROJECT_NAME} ($JKC) is now LIVE on Solana! Buy now: {BUY_URL} 🔥\n\n💎 Low Market Cap Gem\n✅ Liquidity Locked\n🔒 Contract Renounced",
-    f"💫 Join the {PROJECT_NAME} ($JKC) revolution! Trade now!\n\n📈 Chart looking bullish\n💎 Diamond hands community\n🌟 Next 100x Solana Gem",
-    f"🎯 Don't miss out on {PROJECT_NAME} ($JKC)!\n\n🚀 The most entertaining token on Solana\n💎 Strong community\n💰 Buy now before we moon! 🌙"
+    f"🔥 BREAKING: {PROJECT_NAME} ($JKC) is giving away up to $50,000 in airdrops!\n\n💎 For Holders Only:\n✨ Fresh Launch\n🔒 Liquidity Locked\n💰 Massive Growth Potential\n\nBuy now to qualify! 🚀",
+    f"⚡️ Don't Miss Out: {PROJECT_NAME} ($JKC) Airdrop Alert!\n\n🎁 Up to $50,000 for lucky holders\n😊 Join our joyful community\n💫 Early bird advantages\n\nSecure your tokens now! 🌟",
+    f"🚨 Attention Solana Traders! {PROJECT_NAME} ($JKC) is taking off!\n\n💰 $50,000 Airdrop Campaign LIVE\n🎯 Perfect entry point\n🔥 Rapidly growing community\n\nBuy & hold to participate! 🎉",
+    f"💎 {PROJECT_NAME} ($JKC) - Your Next Solana Gem!\n\n🎁 Massive Airdrop Program\n🚀 Fresh Launch Phase\n✨ Growing Organically\n\nDon't wait - Buy now! 🌙",
+    f"🌟 The Secret is Out: {PROJECT_NAME} ($JKC)!\n\n💸 $50,000 Airdrop Pool\n🎯 Limited Time Opportunity\n🔒 Secure Investment\n\nJoin before it's too late! 💫"
 ]

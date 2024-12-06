@@ -84,7 +84,7 @@ def handle_messages(message):
 def send_reminder():
     """Send buy reminder to group"""
     current_hour = datetime.now().hour
-    reminder_index = (current_hour // 8) % 3  # Divide day into 3 periods
+    reminder_index = (current_hour // 5) % 5  # Divide day into 5 periods
     send_buy_button(GROUP_ID, REMINDER_MESSAGES[reminder_index], REMINDER_IMAGE_URL)
 
 def schedule_reminders():
