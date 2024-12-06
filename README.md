@@ -1,6 +1,6 @@
 # JokeCoin Telegram Bot
 
-A Telegram bot for managing the JokeCoin ($JOKE) community group on Solana.
+A Telegram bot for managing the JokeCoin ($JKC) community group on Solana.
 
 ## Features
 
