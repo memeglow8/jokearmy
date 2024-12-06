@@ -34,5 +34,10 @@ REMINDER_MESSAGES = [
     f"⚡️ Don't Miss Out: {PROJECT_NAME} ($JKC) Airdrop Alert!\n\n🎁 Up to $50,000 for lucky holders\n😊 Join our joyful community\n💫 Early bird advantages\n\nSecure your tokens now! 🌟",
     f"🚨 Attention Solana Traders! {PROJECT_NAME} ($JKC) is taking off!\n\n💰 $50,000 Airdrop Campaign LIVE\n🎯 Perfect entry point\n🔥 Rapidly growing community\n\nBuy & hold to participate! 🎉",
     f"💎 {PROJECT_NAME} ($JKC) - Your Next Solana Gem!\n\n🎁 Massive Airdrop Program\n🚀 Fresh Launch Phase\n✨ Growing Organically\n\nDon't wait - Buy now! 🌙",
-    f"🌟 The Secret is Out: {PROJECT_NAME} ($JKC)!\n\n💸 $50,000 Airdrop Pool\n🎯 Limited Time Opportunity\n🔒 Secure Investment\n\nJoin before it's too late! 💫"
+    f"🌟 The Secret is Out: {PROJECT_NAME} ($JKC)!\n\n💸 $50,000 Airdrop Pool\n🎯 Limited Time Opportunity\n🔒 Secure Investment\n\nJoin before it's too late! 💫",
+    f"💫 {PROJECT_NAME} ($JKC) is Making Waves!\n\n🎁 $50,000 Airdrop Event\n🚀 Early Stage Opportunity\n💪 Strong Community Backing\n\nGet in now! 🔥",
+    f"🎯 Smart Money is Moving to {PROJECT_NAME} ($JKC)!\n\n💰 Massive Airdrop Worth $50,000\n✨ Perfect Timing\n🌟 Unlimited Potential\n\nDon't miss out! 🚀",
+    f"⚡️ {PROJECT_NAME} ($JKC) - The Next Big Thing!\n\n🎁 $50,000 Airdrop Running\n💎 Gem Alert\n🔒 Safe Investment\n\nBuy now or regret later! 🌙",
+    f"🚀 {PROJECT_NAME} ($JKC) is Trending!\n\n💸 Huge $50,000 Airdrop\n✨ Growing Fast\n💪 Active Community\n\nJoin the movement! 🔥",
+    f"🌟 Last Chance: {PROJECT_NAME} ($JKC)!\n\n🎁 $50,000 Airdrop Campaign\n💎 Hidden Gem\n🚀 Ready to Moon\n\nBuy now before takeoff! ⚡️"
 ]

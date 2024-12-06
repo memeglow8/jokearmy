@@ -83,15 +83,13 @@ def handle_messages(message):
 
 def send_reminder():
     """Send buy reminder to group with buy and claim buttons"""
-    current_hour = datetime.now().hour
-    reminder_index = (current_hour // 5) % 5  # Divide day into 5 periods
+    current_time = datetime.now()
+    reminder_index = (current_time.hour * 60 + current_time.minute) // 30 % 10  # Change every 30 minutes, cycle through 10 messages
     send_buy_button(GROUP_ID, REMINDER_MESSAGES[reminder_index], REMINDER_IMAGE_URL)
 
 def schedule_reminders():
     """Schedule reminder messages"""
-    schedule.every().day.at("08:00").do(send_reminder)
-    schedule.every().day.at("16:00").do(send_reminder)
-    schedule.every().day.at("00:00").do(send_reminder)
+    schedule.every(30).minutes.do(send_reminder)
     
     while True:
         schedule.run_pending()
