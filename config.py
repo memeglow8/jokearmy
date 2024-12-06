@@ -8,6 +8,11 @@ load_dotenv()
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL')
 GROUP_ID = os.getenv('GROUP_ID')
+PROJECT_NAME = os.getenv('PROJECT_NAME', 'JokeCoin')
+BUY_URL = os.getenv('BUY_URL', 'https://pumpfun.com/trade/jokecoin')
+WELCOME_IMAGE_URL = os.getenv('WELCOME_IMAGE_URL')
+WARNING_IMAGE_URL = os.getenv('WARNING_IMAGE_URL')
+BAN_IMAGE_URL = os.getenv('BAN_IMAGE_URL')
 
 # Forbidden words that will result in ban
 FORBIDDEN_WORDS = [
@@ -21,12 +26,9 @@ FORBIDDEN_WORDS = [
     "fud"
 ]
 
-# Buy button URL
-BUY_URL = "https://pumpfun.com/trade/jokecoin"
-
 # Reminder messages
 REMINDER_MESSAGES = [
-    "🚀 JokeCoin ($JOKE) is now LIVE on Solana! Buy on PumpFun: pumpfun.com/trade/jokecoin 🔥\n\n💎 Low Market Cap Gem\n✅ Liquidity Locked\n🔒 Contract Renounced",
-    "💫 Join the JokeCoin ($JOKE) revolution! Trade now on PumpFun!\n\n📈 Chart looking bullish\n💎 Diamond hands community\n🌟 Next 100x Solana Gem",
-    "🎯 Don't miss out on JokeCoin ($JOKE)!\n\n🚀 The most entertaining token on Solana\n💎 Strong community\n💰 Buy now on PumpFun before we moon! 🌙"
+    f"🚀 {PROJECT_NAME} ($JOKE) is now LIVE on Solana! Buy now: {BUY_URL} 🔥\n\n💎 Low Market Cap Gem\n✅ Liquidity Locked\n🔒 Contract Renounced",
+    f"💫 Join the {PROJECT_NAME} ($JOKE) revolution! Trade now!\n\n📈 Chart looking bullish\n💎 Diamond hands community\n🌟 Next 100x Solana Gem",
+    f"🎯 Don't miss out on {PROJECT_NAME} ($JOKE)!\n\n🚀 The most entertaining token on Solana\n💎 Strong community\n💰 Buy now before we moon! 🌙"
 ]

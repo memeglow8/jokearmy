@@ -10,12 +10,16 @@ from config import *
 app = Flask(__name__)
 bot = TeleBot(BOT_TOKEN)
 
-def send_buy_button(chat_id, message_text):
+def send_buy_button(chat_id, message_text, image_url=None):
     """Create and send message with buy button"""
     markup = types.InlineKeyboardMarkup()
     buy_button = types.InlineKeyboardButton(text="🛍 Buy Now", url=BUY_URL)
     markup.add(buy_button)
-    bot.send_message(chat_id, message_text, reply_markup=markup)
+    
+    if image_url:
+        bot.send_photo(chat_id, image_url, caption=message_text, reply_markup=markup)
+    else:
+        bot.send_message(chat_id, message_text, reply_markup=markup)
 
 def contains_link(message):
     """Check if message contains telegram invite link"""
@@ -43,8 +47,8 @@ def webhook():
 def welcome_new_member(message):
     """Welcome new members with buy button"""
     for new_member in message.new_chat_members:
-        welcome_text = f"Welcome {new_member.first_name} to the official JokeCoin community! 🎉\n\n🚀 JokeCoin is now LIVE on Solana!\n💎 Trade on PumpFun\n🔒 Liquidity Locked\n\nClick below to buy $JOKE!"
-        send_buy_button(message.chat.id, welcome_text)
+        welcome_text = f"Welcome {new_member.first_name} to the official {PROJECT_NAME} community! 🎉\n\n🚀 {PROJECT_NAME} is now LIVE on Solana!\n💎 Trade Now\n🔒 Liquidity Locked\n\nClick below to buy $JOKE!"
+        send_buy_button(message.chat.id, welcome_text, WELCOME_IMAGE_URL)
 
 @bot.message_handler(func=lambda message: True)
 def handle_messages(message):
@@ -56,10 +60,11 @@ def handle_messages(message):
     # Check for invite links
     if contains_link(message) and not is_admin:
         bot.delete_message(message.chat.id, message.message_id)
-        warning = bot.send_message(
-            message.chat.id,
-            f"⚠️ {message.from_user.first_name}, for security reasons, only admins can share invite links! Join our official channels only."
-        )
+        warning_text = f"⚠️ {message.from_user.first_name}, for security reasons, only admins can share invite links! Join our official channels only."
+        if WARNING_IMAGE_URL:
+            warning = bot.send_photo(message.chat.id, WARNING_IMAGE_URL, caption=warning_text)
+        else:
+            warning = bot.send_message(message.chat.id, warning_text)
         # Delete warning after 30 seconds
         threading.Timer(30, bot.delete_message, args=[message.chat.id, warning.message_id]).start()
         return
@@ -68,10 +73,11 @@ def handle_messages(message):
     if contains_forbidden_words(message):
         bot.delete_message(message.chat.id, message.message_id)
         bot.ban_chat_member(message.chat.id, message.from_user.id)
-        bot.send_message(
-            message.chat.id,
-            f"🚫 {message.from_user.first_name} has been banned for FUD or harmful behavior. JokeCoin maintains a positive community!"
-        )
+        ban_text = f"🚫 {message.from_user.first_name} has been banned for FUD or harmful behavior. {PROJECT_NAME} maintains a positive community!"
+        if BAN_IMAGE_URL:
+            bot.send_photo(message.chat.id, BAN_IMAGE_URL, caption=ban_text)
+        else:
+            bot.send_message(message.chat.id, ban_text)
 
 def send_reminder():
     """Send buy reminder to group"""
