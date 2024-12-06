@@ -82,7 +82,7 @@ def handle_messages(message):
             bot.send_message(message.chat.id, ban_text)
 
 def send_reminder():
-    """Send buy reminder to group"""
+    """Send buy reminder to group with buy and claim buttons"""
     current_hour = datetime.now().hour
     reminder_index = (current_hour // 5) % 5  # Divide day into 5 periods
     send_buy_button(GROUP_ID, REMINDER_MESSAGES[reminder_index], REMINDER_IMAGE_URL)
